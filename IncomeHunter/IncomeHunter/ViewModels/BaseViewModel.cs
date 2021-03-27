@@ -10,7 +10,7 @@ namespace IncomeHunter.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Job> DataStore => DependencyService.Get<IDataStore<Job>>();
 
         bool isBusy = false;
         public bool IsBusy

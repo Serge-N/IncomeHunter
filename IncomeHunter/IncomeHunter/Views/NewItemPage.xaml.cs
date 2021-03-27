@@ -10,7 +10,7 @@ namespace IncomeHunter.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Job Job { get; set; }
 
         public NewItemPage()
         {

@@ -1,14 +1,5 @@
-﻿using IncomeHunter.Models;
-using IncomeHunter.ViewModels;
-using IncomeHunter.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using IncomeHunter.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace IncomeHunter.Views
 {

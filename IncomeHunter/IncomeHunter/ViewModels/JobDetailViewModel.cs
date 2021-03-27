@@ -7,17 +7,17 @@ using Xamarin.Forms;
 namespace IncomeHunter.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class JobDetailViewModel : BaseViewModel
     {
         private string itemId;
-        private string text;
+        private string title;
         private string description;
         public string Id { get; set; }
 
-        public string Text
+        public string Title
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => title;
+            set => SetProperty(ref title, value);
         }
 
         public string Description
@@ -45,12 +45,12 @@ namespace IncomeHunter.ViewModels
             {
                 var item = await DataStore.GetItemAsync(itemId);
                 Id = item.Id;
-                Text = item.Text;
+                Title = item.Title;
                 Description = item.Description;
             }
             catch (Exception)
             {
-                Debug.WriteLine("Failed to Load Item");
+                Debug.WriteLine("Failed to Load Job");
             }
         }
     }

@@ -10,20 +10,20 @@ namespace IncomeHunter.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private Job _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<Job> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<Job> ItemTapped { get; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Job>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<Job>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -35,8 +35,8 @@ namespace IncomeHunter.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
+                var Jobs = await DataStore.GetItemsAsync(true);
+                foreach (var item in Jobs)
                 {
                     Items.Add(item);
                 }
@@ -57,7 +57,7 @@ namespace IncomeHunter.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public Job SelectedItem
         {
             get => _selectedItem;
             set
@@ -72,13 +72,13 @@ namespace IncomeHunter.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(Job item)
         {
             if (item == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(JobDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

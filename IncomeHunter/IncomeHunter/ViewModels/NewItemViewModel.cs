@@ -1,8 +1,5 @@
 ﻿using IncomeHunter.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace IncomeHunter.ViewModels
@@ -26,7 +23,7 @@ namespace IncomeHunter.ViewModels
                 && !String.IsNullOrWhiteSpace(description);
         }
 
-        public string Text
+        public string Title
         {
             get => text;
             set => SetProperty(ref text, value);
@@ -49,10 +46,10 @@ namespace IncomeHunter.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Job newItem = new Job()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
+                Title = Title,
                 Description = Description
             };
 

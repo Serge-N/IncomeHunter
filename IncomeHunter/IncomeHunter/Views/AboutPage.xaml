@@ -22,22 +22,22 @@ Title="Description">
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label Text="Company" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
-        <Label Text="Google" FontSize="Medium" Grid.Column="1" Grid.Row="0"/>
-        <Label Text="Title" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="1"/>
-        <Label Text="Junior Web Developer" FontSize="Medium" Grid.Column="1" Grid.Row="1"/>
-        <Label Text="Location" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="2"/>
-        <Label Text="Remote" FontSize="Medium"   Grid.Column="1" Grid.Row="2"/>
-        <Label Text="Pay" FontSize="Medium"  FontAttributes="Bold"  Grid.Column="0" Grid.Row="3"/>
-        <Label Text="$2000 per month" FontSize="Medium" Grid.Column="1" Grid.Row="3"/>
-        <Label Text="Source" FontSize="Medium"  FontAttributes="Bold"  Grid.Column="0" Grid.Row="4"/>
-        <Label Text="LinkedIn" FontSize="Medium" Grid.Column="1" Grid.Row="4"/>
-        <Label Text="Experience" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="5"/>
-        <Label Text="3 Years" FontSize="Medium" Grid.Column="1" Grid.Row="5"/>
-        <Label Text="Education" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="6"/>
-        <Label Text="Degree" FontSize="Medium" Grid.Column="1" Grid.Row="6"/>
-        <Label Text="Url" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="7"/>
-        <Label Text="www.linked.com/jobs/..." FontSize="Medium" Grid.Column="1" Grid.Row="7"/>
+        <Label Title="Company" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+        <Label Title="Google" FontSize="Medium" Grid.Column="1" Grid.Row="0"/>
+        <Label Title="Title" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="1"/>
+        <Label Title="Junior Web Developer" FontSize="Medium" Grid.Column="1" Grid.Row="1"/>
+        <Label Title="Location" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="2"/>
+        <Label Title="Remote" FontSize="Medium"   Grid.Column="1" Grid.Row="2"/>
+        <Label Title="Pay" FontSize="Medium"  FontAttributes="Bold"  Grid.Column="0" Grid.Row="3"/>
+        <Label Title="$2000 per month" FontSize="Medium" Grid.Column="1" Grid.Row="3"/>
+        <Label Title="Source" FontSize="Medium"  FontAttributes="Bold"  Grid.Column="0" Grid.Row="4"/>
+        <Label Title="LinkedIn" FontSize="Medium" Grid.Column="1" Grid.Row="4"/>
+        <Label Title="Experience" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="5"/>
+        <Label Title="3 Years" FontSize="Medium" Grid.Column="1" Grid.Row="5"/>
+        <Label Title="Education" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="6"/>
+        <Label Title="Degree" FontSize="Medium" Grid.Column="1" Grid.Row="6"/>
+        <Label Title="Url" FontSize="Medium" FontAttributes="Bold"  Grid.Column="0" Grid.Row="7"/>
+        <Label Title="www.linked.com/jobs/..." FontSize="Medium" Grid.Column="1" Grid.Row="7"/>
     </Grid>
 
 
