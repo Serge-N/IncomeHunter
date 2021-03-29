@@ -8,24 +8,21 @@ using Xamarin.Forms;
 
 namespace IncomeHunter.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class JobsViewModel : BaseViewModel
     {
         private Job _selectedItem;
 
-        public ObservableCollection<Job> Items { get; }
+        public ObservableCollection<Job> Job { get; }
         public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get; }
         public Command<Job> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public JobsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Job>();
+            Job = new ObservableCollection<Job>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ItemTapped = new Command<Job>(OnItemSelected);
-
-            AddItemCommand = new Command(OnAddItem);
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -34,11 +31,11 @@ namespace IncomeHunter.ViewModels
 
             try
             {
-                Items.Clear();
+                Job.Clear();
                 var Jobs = await DataStore.GetItemsAsync(true);
                 foreach (var item in Jobs)
                 {
-                    Items.Add(item);
+                    Job.Add(item);
                 }
             }
             catch (Exception ex)
@@ -67,10 +64,7 @@ namespace IncomeHunter.ViewModels
             }
         }
 
-        private async void OnAddItem(object obj)
-        {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
-        }
+       
 
         async void OnItemSelected(Job item)
         {
@@ -78,7 +72,7 @@ namespace IncomeHunter.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(JobDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(JobDetailPage)}?{nameof(JobDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

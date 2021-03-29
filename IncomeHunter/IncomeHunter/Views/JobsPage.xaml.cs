@@ -3,15 +3,15 @@ using Xamarin.Forms;
 
 namespace IncomeHunter.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class JobsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        JobsViewModel _viewModel;
 
-        public ItemsPage()
+        public JobsPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new JobsViewModel();
         }
 
         protected override void OnAppearing()

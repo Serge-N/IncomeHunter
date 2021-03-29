@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace IncomeHunter.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class JobDetailPage : ContentPage
     {
-        public ItemDetailPage()
+        public JobDetailPage()
         {
             InitializeComponent();
             BindingContext = new JobDetailViewModel();
