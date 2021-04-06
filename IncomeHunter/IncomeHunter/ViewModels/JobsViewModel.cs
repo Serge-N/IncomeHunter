@@ -66,13 +66,13 @@ namespace IncomeHunter.ViewModels
 
        
 
-        async void OnItemSelected(Job item)
+        async void OnItemSelected(Job job)
         {
-            if (item == null)
+            if (job == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(JobDetailPage)}?{nameof(JobDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(JobDetailPage)}?{nameof(JobDetailViewModel.JobId)}={job.Id}");
         }
     }
 }
